@@ -1,0 +1,147 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{hyperref}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Mike McCullagh}}\\
+	Leeds, UK $\cdot$ mikemccullagh@outlook.com $\cdot$ 07587232373 $\cdot$ https://www.linkedin.com/in/mike-mccullagh-7171b5234/\\
+\end{center}
+
+%==== Education ====%
+\header{Education}
+\textbf{Leeds College of Music}\hfill Leeds, UK\\
+BA Commercial Music Production \textit{GPA: 2.1} \hfill Sep 2009 - Sep 2012\\
+\vspace{2mm}
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{Northcoders} \hfill Leeds, UK\\
+\textit{Trainee Software Developer} \hfill Jan 2023 - April 2023\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item At Northcoders I gained foundational skills in software development including coding fundamentals, agile development practices, kanban, version control and test-driven development. Completed a series of full stack projects building out RESTful APIS using Express with both SQL and noSQL databases and creating responsive user interfaces with Next JS, React and Vue.
+\end{itemize}
+\textbf{The AA} \hfill Remote\\
+\textit{Customer Service Advisor} \hfill Jan 2022 - Nov 2022\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item My duties in the role were handling incoming customer calls, logging breakdowns, resolving complaints and enquiries and liaising with rescue patrols and emergency services as required.
+\end{itemize}
+\textbf{Herman Vapes Ltd} \hfill Leeds, UK\\
+\textit{Manager} \hfill Feb 2013 - Nov 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item As Manager of a retail store specializing in electronic goods my role involved various duties including stock management, buying, staff rotas and training as well as customer service and support. I was also a company representative at trade shows securing contracts for both importation and distribution with domestic and international partners.
+\end{itemize}
+
+\header{Skills}
+\begin{tabular}{ l l }
+	Programming Languages: & JavaScript, TypeScript, Java, Python                                                 \\
+	Front-end:             & HTML, CSS, NextJS, React, Tailwind, Flutter.                                         \\
+	Back-end:              & Node.js, Express, Spring Boot, Flask, Hibernate, PostgreSQL, MySQL, MongoDB, Docker. \\
+	Testing:               & Jest, SuperTest. Junit, Puppeteer, Selenium.                                         \\
+	Cloud:                 & AWS, Google Cloud, Firebase, Vercel.                                                 \\
+	Machine learning:      & PyTorch, SK-learn                                                                    \\
+\end{tabular}
+\vspace{2mm}
+
+\header{Projects}
+{\textbf{E-Commerce Site}} {\sl TypeScript, Next JS, React, Java, SpringBoot, WebSockets, PostgreSQL, Docker, AWS} \hfill https://github.com/micknice/e-commerce-be\\
+E-Commerce store cloning the MiraFit site using React. Product images, descriptions, prices and reviews scraped using Puppeteer. Functionality includes custom user sign up, login, email verification, password reset and live inventory/cart update using WebSockets.\\
+\vspace*{2mm}
+{\textbf{News Site}} {\sl JavaScript, HTML, Next JS, React, Tailwind CSS, NodeJS, Express, PostgreSQL} \hfill https://www.thetardigrade.co.uk/\\
+Single page application hosting news articles. Allows user login, comments and voting on articles and comments. Features include location-based weather widget and similar article recommendation using TF/IDF analysis.\\
+\vspace*{2mm}
+{\textbf{Skin Cancer Detection Site}} {\sl JavaScript, Vue JS, NodeJS, Express, MySQL, Python, PyTorch, Flask} \hfill https://main.d2lr9qljwqxiia.amplifyapp.com/\\
+Single page application allowing users to upload photos of skin conditions and have them classified as one of seven different conditions. Front end built using Vue JS. Back end consists of a primary express server handling user login and image upload/storage and an inference microservice built with Flask hosting a PyTorch model trained on the HAM10000 dataset\\
+\vspace*{2mm}
+{\textbf{AA Breakdown Simulator}} {\sl JavaScript, React, MobX, NodeJS, Express, Bing Maps API, SocketIO} \hfill https://www.youtube.com/watch?v=DnE5YcD77SE\\
+Simulation of automotive breakdowns, rescue patrol allocation and patrol attendance across UK road network. Basic GUI shows: Patrol status- inactive, assigned, en-route and on scene. Breakdown status- patrol assignment. Individual patrols selectable to show route, breakdowns attended, ETA, total travel time for shift etc.\\
+\vspace*{2mm}
+
+\header{Awards}
+\textbf{Deadlift PR}\\
+255 kg \hfill Nov 2022\\
+\vspace*{2mm}
+
+\ 
+\pdfinfo{
+/Title (Resume)
+/Author (Mike McCullagh)
+/Subject (Full Stack Software Developer)
+/Keywords (testing, unit testing, regression testing, integration testing, automated testing, testing frameworks, Jest, Cucumber, Selenium, Junit, PyTest, Supertest, Puppeteer, TDD, BDD, DDD, clean code, maintainable, scalable, readable, well documented, version control, continuous integration, continuous deployment, CI/CD, Git, Github, Gitlab, Gitflow, Jenkins, Jira, C#, C#.Net, .Net, .Net core 2 years experience, industry experience, production, developer, engineer, if you are reading this please interview me, im smart, im  a grinder, I  am equally comfortable being left to google it and figure it out myself as I am being guided. I am socially full functional and will occasionally make you laugh.)
+}
+\end{document}
